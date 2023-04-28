@@ -1,0 +1,177 @@
+<html>
+    <head>
+        <title>Calculator</title>
+        <link rel="icon" href="Vac logo.png" type="image/icon type">
+        <style>
+.bodyy{
+    background-color: beige;
+    justify-content: center;
+    align-content: center;
+}
+.h{
+text-align:center;
+border-bottom-style: solid;
+border-bottom-color: grey ;
+font-size: 100px;
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+}
+.allinc{
+    justify-content: center;
+    align-items: center;
+    max-width: 50vh;
+    padding-left: 40%;
+}
+.inputs{
+min-height: 10vh;
+max-height: fit-content;
+background-color: rgba(0, 0, 0, 0.916);
+color: greenyellow;
+font-size: xx-large;
+padding:1%;
+}
+.barbottom{
+font-size: xx-large;
+}
+.numsandops{
+display:grid;
+grid-template-columns: 1fr 1fr 1fr ;
+grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+font-size: xx-large;
+min-height: 50vh;
+}
+.nums{
+    font-size: xx-large;
+    background-color: rgb(32, 70, 32);
+    color:blanchedalmond;
+    border-color: aliceblue;
+    border-width: 10px;
+}
+.nums:hover{
+    background-color: bisque;
+    color:black;
+    cursor:pointer;
+}
+.ops{
+    font-size: xx-large;
+    background-color: rgb(32, 70, 32);
+    color:blanchedalmond;
+    border-color: aliceblue;
+    border-width: 10px;
+}
+.ops:hover{
+    background-color: bisque;
+    color:black;
+    cursor:pointer;
+}
+.calcbody{
+    justify-content: center;
+    align-items: center;
+
+}
+.fine{ 
+  background-color:#111;
+  font-size: large;
+  color:aliceblue;
+  line-height: 20px;
+  Padding: 20px;
+  padding-top: 30px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+}
+ul {
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    overflow: hidden;
+    background-color: #333;
+
+}
+
+li{
+    float: left;
+}
+li a{
+    display:block;
+    padding: 14px 16px; 
+
+}
+.navbar a{
+    text-decoration:none;
+    color:white;
+}
+.navbar{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    width:100%;
+
+}
+.navbar a:hover{
+    color:#0bff0b;
+}
+.explore{
+    background-color:#111; 
+    color:aliceblue;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+    font-size: x-large;
+    font-family: georgia, serif;
+}
+        </style>
+    </head>
+
+    <body class="body">
+        <h1 class="h">Calculator</h1>
+<div class="allinc">
+<div class="calcbody">
+        <div class="inputs">
+            <div class="barbottom" id="currentsum"></div>
+        </div>
+
+        <div class="numsandops">
+<button class="nums" onclick="zero()">0</button>
+<button class="nums" onclick="one()">1</button>
+<button class="nums" onclick="two()">2</button>
+<button class="nums" onclick="three()">3</button>
+<button class="nums" onclick="four()">4</button>
+<button class="nums" onclick="five()">5</button>
+<button class="nums" onclick="six()">6</button>
+<button class="nums" onclick="seven()">7</button>
+<button class="nums" onclick="eight()">8</button>
+<button class="nums" onclick="nine()">9</button>
+<button class="nums" onclick="point()">.</button>
+<button class="ops" onclick="plus()">+</button>
+<button class="ops" onclick="minus()">-</button>
+<button class="ops" onclick="divide()">÷</button>
+<button class="ops" onclick="multiply()">*</button>
+<button class="ops" onclick="clearall()">AC</button>
+<button class="ops" onclick="deleteone()">DEL</button>
+<button class="ops" onclick="equals()">=</button>
+        </div>
+
+<div class="t">
+    <button onclick="tester()" class="nums"> Testing</button>
+<p class="tester inputs" id="tester"></p>
+</div>
+</div>
+</div>
+
+<div class="fine">
+    <p>©2023 Vac Galore. All rights reserved</p>
+    <p> Vac Galore is a subsidiary of Website Prototypes Ltd.</p>  
+</div>
+
+<div class="navbar">
+    <h3 class="explore"><b><u> Explore: </u></b></h3>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="African Islands.html">African Islands</a></li>
+        <li><a href="North Africa.html">North Africa</a></li>
+        <li><a href="Central Africa.html">Central Africa</a></li>
+        <li><a href="Southern Africa.html">Southern Africa</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="About.html" >About us</a></li>
+    </ul>
+</div>
+
+        <script src="calculator.js"></script>
+    </body>
+</html>
