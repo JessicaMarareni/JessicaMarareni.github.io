@@ -17,28 +17,21 @@ font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
 }
 .allinc{
     display:flex;
+    align-content: center;
     justify-content: center;
     align-items: center;
-    align-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
 }
 .inputs{
-min-height: 10vh;
-min-width: 100vh;
-max-height: fit-content;
-background-color: rgba(0, 0, 0, 0.916);
-color: greenyellow;
-font-size: xx-large;
-padding:1%;
-}
-.barbottom{
-font-size: xx-large;
-}
-.numsandops{
-display:grid;
-grid-template-columns: 1fr 1fr 1fr ;
-grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-font-size: xx-large;
-min-height: 50vh;
+    min-height: 11vh;
+    max-height: fit-content;
+    min-width: 59vh;
+    background-color: rgba(0, 0, 0, 0.916);
+    color: greenyellow;
+    font-size: xx-large;
+    padding:1%;
+    margin-bottom: 0%;
 }
 .nums{
     font-size: xx-large;
@@ -46,6 +39,8 @@ min-height: 50vh;
     color:blanchedalmond;
     border-color: aliceblue;
     border-width: 10px;
+    min-height: 10vh;
+    min-width: 20vh;
 }
 .nums:hover{
     background-color: bisque;
@@ -58,6 +53,8 @@ min-height: 50vh;
     color:blanchedalmond;
     border-color: aliceblue;
     border-width: 10px;
+    min-height: 10vh;
+    min-width: 20vh;
 }
 .ops:hover{
     background-color: bisque;
@@ -119,34 +116,59 @@ li a{
         </style>
     </head>
 
-    <body class="body">
-        <h1 class="h">Calculator</h1>
-<div class="allinc">
-<div class="calcbody">
-        <div class="inputs">
-            <div class="barbottom" id="currentsum"></div>
-        </div>
+<body class="bodyy">
+    <h1 class="h">Calculator</h1>
+    <div class="allinc">    
 
-        <div class="numsandops">
-<button class="nums" onclick="zero()">0</button>
-<button class="nums" onclick="one()">1</button>
-<button class="nums" onclick="two()">2</button>
-<button class="nums" onclick="three()">3</button>
-<button class="nums" onclick="four()">4</button>
-<button class="nums" onclick="five()">5</button>
-<button class="nums" onclick="six()">6</button>
-<button class="nums" onclick="seven()">7</button>
-<button class="nums" onclick="eight()">8</button>
-<button class="nums" onclick="nine()">9</button>
-<button class="nums" onclick="point()">.</button>
-<button class="ops" onclick="plus()">+</button>
-<button class="ops" onclick="minus()">-</button>
-<button class="ops" onclick="divide()">÷</button>
-<button class="ops" onclick="multiply()">*</button>
-<button class="ops" onclick="clearall()">AC</button>
-<button class="ops" onclick="deleteone()">DEL</button>
-<button class="ops" onclick="equals()">=</button>
-        </div>
+        <div><p class="inputs" id="currentsum"></p></div>
+    <div>
+        <button class="nums" onclick="zero()">0</button>
+        <button class="nums" onclick="one()">1</button>
+        <button class="nums" onclick="two()">2</button>
+    </div>
+    <div>
+        <button class="nums" onclick="three()">3</button>
+        <button class="nums" onclick="four()">4</button>
+        <button class="nums" onclick="five()">5</button>
+    </div>
+    <div>
+        <button class="nums" onclick="six()">6</button>
+        <button class="nums" onclick="seven()">7</button>
+        <button class="nums" onclick="eight()">8</button>
+    </div>
+    <div>
+        <button class="nums" onclick="nine()">9</button>
+        <button class="nums" onclick="point()">.</button>
+        <button class="ops" onclick="plus()">+</button>
+    </div>
+    <div>
+        <button class="ops" onclick="minus()">-</button>
+        <button class="ops" onclick="divide()">÷</button>
+        <button class="ops" onclick="multiply()">*</button>
+    </div>
+    <div>
+        <button class="ops" onclick="clearall()">AC</button>
+        <button class="ops" onclick="deleteone()">DEL</button>
+        <button class="ops" onclick="equals1()">=</button>
+    </div>    
+
+    <div><button onclick="tester()" class="nums"> Testing</button></div>
+    <div>
+        <p class="tester inputs" id="tester"></p>
+        <p class="tester inputs" id="c"></p>
+        <p class="tester inputs" id="o"></p>
+        <p class="tester inputs" id="d"></p>
+        <p class="tester inputs" id="i"></p>
+        <p class="tester inputs" id="n"></p>
+        <p class="tester inputs" id="g"></p>
+        <p class="tester inputs" id="i"></p>
+        <p class="tester inputs" id="s"></p>
+        <p class="tester inputs" id="f"></p>
+        <p class="tester inputs" id="u"></p>
+        <p class="tester inputs" id="n"></p>
+</div>
+</div>
+<div>
 
 <div class="t">
     <button onclick="tester()" class="nums"> Testing</button>
