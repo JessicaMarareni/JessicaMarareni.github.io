@@ -5,8 +5,6 @@
         <style>
 .bodyy{
     background-color: beige;
-    justify-content: center;
-    align-content: center;
 }
 .h{
 text-align:center;
@@ -16,10 +14,8 @@ font-size: 100px;
 font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
 }
 .bigcontainer{
-    display: flex;
-    align-content: center;
-    align-items: center;
-    width:100%
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }     
 .allinc{
     display:flex;
@@ -28,11 +24,8 @@ font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
     flex-direction: column;
     flex-wrap: wrap;
 }
-.inp{
-    width:inherit;
 .inputs{
     height: 100px;
-    width: 98%;
     background-color: rgba(0, 0, 0, 0.916);
     color: greenyellow;
     font-size: xx-large;
@@ -119,6 +112,8 @@ li a{
 <body class="bodyy">
     <h1 class="h">Calculator</h1>
     <div class="bigcontainer">
+
+    <div class="placeholder"></div>
     <div class="allinc">    
 
         <div class="inp"><p class="inputs" id="currentsum"></p></div>
@@ -156,6 +151,7 @@ li a{
     <div class="nao"><button onclick="tester()" class="nums"> Testing</button></div>
 </div>
 </div>
+    <div class="placeholder"></div>
     
 <div class="fine">
     <p>©2023 Vac Galore. All rights reserved</p>
