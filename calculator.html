@@ -15,32 +15,39 @@ border-bottom-color: grey ;
 font-size: 100px;
 font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
 }
+.bigcontainer{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    width:100%
+}     
 .allinc{
     display:flex;
     align-content: center;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
+.inp{
+    width:inherit;
 .inputs{
-    min-height: 11px;
-    max-height: fit-content;
-    min-width: 59px;
+    height: 100px;
+    width: 98%;
     background-color: rgba(0, 0, 0, 0.916);
     color: greenyellow;
     font-size: xx-large;
     padding:1%;
     margin-bottom: 0%;
 }
+.nao{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
 .nums{
     font-size: xx-large;
     background-color: rgb(32, 70, 32);
     color:blanchedalmond;
     border-color: aliceblue;
     border-width: 10px;
-    min-height: 10px;
-    min-width: 20px;
 }
 .nums:hover{
     background-color: bisque;
@@ -53,18 +60,11 @@ font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
     color:blanchedalmond;
     border-color: aliceblue;
     border-width: 10px;
-    min-height: 10px;
-    min-width: 20px;
 }
 .ops:hover{
     background-color: bisque;
     color:black;
     cursor:pointer;
-}
-.calcbody{
-    justify-content: center;
-    align-items: center;
-
 }
 .fine{ 
   background-color:#111;
@@ -118,42 +118,43 @@ li a{
 
 <body class="bodyy">
     <h1 class="h">Calculator</h1>
+    <div class="bigcontainer">
     <div class="allinc">    
 
-        <div><p class="inputs" id="currentsum"></p></div>
-    <div>
+        <div class="inp"><p class="inputs" id="currentsum"></p></div>
+    <div class="nao">
         <button class="nums" onclick="zero()">0</button>
         <button class="nums" onclick="one()">1</button>
         <button class="nums" onclick="two()">2</button>
     </div>
-    <div>
+    <div class="nao">
         <button class="nums" onclick="three()">3</button>
         <button class="nums" onclick="four()">4</button>
         <button class="nums" onclick="five()">5</button>
     </div>
-    <div>
+    <div class="nao">
         <button class="nums" onclick="six()">6</button>
         <button class="nums" onclick="seven()">7</button>
         <button class="nums" onclick="eight()">8</button>
     </div>
-    <div>
+    <div class="nao">
         <button class="nums" onclick="nine()">9</button>
         <button class="nums" onclick="point()">.</button>
         <button class="ops" onclick="plus()">+</button>
     </div>
-    <div>
+    <div class="nao">
         <button class="ops" onclick="minus()">-</button>
         <button class="ops" onclick="divide()">÷</button>
         <button class="ops" onclick="multiply()">*</button>
     </div>
-    <div>
+    <div class="nao">
         <button class="ops" onclick="clearall()">AC</button>
         <button class="ops" onclick="deleteone()">DEL</button>
         <button class="ops" onclick="equals1()">=</button>
     </div>    
 
-    <div><button onclick="tester()" class="nums"> Testing</button></div>
-    <div>
+    <div class="nao"><button onclick="tester()" class="nums"> Testing</button></div>
+    <div class="inp">
         <p class="tester inputs" id="tester"></p>
         <p class="tester inputs" id="c"></p>
         <p class="tester inputs" id="o"></p>
@@ -168,15 +169,7 @@ li a{
         <p class="tester inputs" id="n"></p>
 </div>
 </div>
-<div>
-
-<div class="t">
-    <button onclick="tester()" class="nums"> Testing</button>
-<p class="tester inputs" id="tester"></p>
 </div>
-</div>
-</div>
-
 <div class="fine">
     <p>©2023 Vac Galore. All rights reserved</p>
     <p> Vac Galore is a subsidiary of Website Prototypes Ltd.</p>  
