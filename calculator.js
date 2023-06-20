@@ -1,6 +1,15 @@
-function zero(){
-    var userinp=document.querySelector("#currentsum").innerHTML;
-    document.getElementById("currentsum").innerHTML=userinp+"0";
+function help(){
+    alert("Hi there👋. "+
+    "This calculator does addition, subtraction, multiplication and division."+
+    "We are BODMAS certified so don't worry about that :). "+
+    "You may notice that nothing happens when you type using your own keys. "+
+    "Please make use of our keys that you see on the screen at this point. "+
+    "But not to worry, our developers are working hard to ensure you'll be able to use your keyboard soon."+
+    " Happy calculating!")
+} 
+    function zero(){
+        var userinp=document.querySelector("#currentsum").innerHTML;
+        document.getElementById("currentsum").innerHTML=userinp+"0";
     }
     
     function one(){
