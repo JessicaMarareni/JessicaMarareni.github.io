@@ -207,8 +207,6 @@ function zero(){
             operators.splice(operators.indexOf("*"),1,"*")
         }
 
-//Then I also need to solve the rounding problem
-
 document.getElementById("c").innerHTML=NewNums;
 document.getElementById("o").innerHTML=operators;
 
