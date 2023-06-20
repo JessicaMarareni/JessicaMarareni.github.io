@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>Calculator</title>
-        <link rel="icon" href="Vac logo.png" type="image/icon type">
+        <link rel="icon" href="Windows XP wallpaper.jpg" type="image/icon type">
         <style>
 .bodyy{
     background-color: beige;
@@ -14,27 +14,50 @@ font-size: 100px;
 font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
 }
 .bigcontainer{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}     
+    padding-bottom: 80px;
+    display: flex;
+} 
+.bigcontainer * {
+    flex-basis: 0.33;
+    flex-grow: 1;
+    flex-shrink: 1;
+
+}
+.help{
+    background-color: rgb(180, 155, 238);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:black;
+    cursor:pointer;
+    border-radius: 30px;
+    width:70px;
+    height: 40px;
+    font-size: medium;
+}
+.help:hover{
+    background-color: rgb(229, 96, 96);
+}
 .allinc{
     display:flex;
     align-content: center;
-    justify-content: center;
     flex-direction: column;
-    flex-wrap: wrap;
+    flex: 0 1 0;
 }
 .inputs{
-    height: 100px;
+    height: 115px;
     background-color: rgba(0, 0, 0, 0.916);
     color: greenyellow;
     font-size: xx-large;
     padding:1%;
     margin-bottom: 0%;
+    max-width: 215px;
+    overflow:wrap;
+    overflow-wrap:break-word;
 }
 .nao{
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
 }
 .nums{
     font-size: xx-large;
@@ -42,6 +65,8 @@ font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
     color:blanchedalmond;
     border-color: aliceblue;
     border-width: 10px;
+    flex-basis: 0;
+    flex-grow: 1;
 }
 .nums:hover{
     background-color: bisque;
@@ -54,6 +79,8 @@ font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
     color:blanchedalmond;
     border-color: aliceblue;
     border-width: 10px;
+    flex-basis: 0;
+    flex-grow: 1;
 }
 .ops:hover{
     background-color: bisque;
@@ -64,45 +91,37 @@ font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
   background-color:#111;
   font-size: large;
   color:aliceblue;
-  line-height: 20px;
   Padding: 20px;
   padding-top: 30px;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
-}
-ul {
-    list-style-type: none;
-    margin:0;
-    padding:0;
-    overflow: hidden;
-    background-color: #333;
-
+  display: flex;
+  flex-direction: column;
 }
 
-li{
-    float: left;
+.navbar{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    background-color: rgb(75, 72, 72);
+    margin-top: 0px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
 }
-li a{
-    display:block;
-    padding: 14px 16px; 
 
-}
 .navbar a{
+    flex-grow: 1;
+    flex-basis: 1;
+    justify-content: space-between;
     text-decoration:none;
     color:white;
 }
-.navbar{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
-    width:100%;
 
-}
 .navbar a:hover{
     color:#0bff0b;
 }
 .explore{
     background-color:#111; 
     color:aliceblue;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 0px;
     text-align: center;
     font-size: x-large;
     font-family: georgia, serif;
@@ -114,9 +133,11 @@ li a{
     <h1 class="h">Calculator</h1>
     <div class="bigcontainer">
 
-    <div class="placeholder"></div>
-    <div class="allinc">    
+    <div class="placeholder">
+        <button onclick="help()" class="help"> Help!</button>
+    </div>
 
+    <div class="allinc">    
         <div class="inp"><p class="inputs" id="currentsum"></p></div>
     <div class="nao">
         <button class="nums" onclick="zero()">0</button>
@@ -148,27 +169,27 @@ li a{
         <button class="ops" onclick="deleteone()">DEL</button>
         <button class="ops" onclick="equals1()">=</button>
     </div>    
+</div>
+
+<div class="placeholder"></div>
 
 </div>
-</div>
-    <div class="placeholder"></div>
+    
     
 <div class="fine">
     <p>©2023 Vac Galore. All rights reserved</p>
     <p> Vac Galore is a subsidiary of Website Prototypes Ltd.</p>  
+    <h3 class="explore"><b> Explore: </b></h3>
 </div>
 
 <div class="navbar">
-    <h3 class="explore"><b><u> Explore: </u></b></h3>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="African Islands.html">African Islands</a></li>
-        <li><a href="North Africa.html">North Africa</a></li>
-        <li><a href="Central Africa.html">Central Africa</a></li>
-        <li><a href="Southern Africa.html">Southern Africa</a></li>
-        <li><a href="calculator.html">Calculator</a></li>
-        <li><a href="About.html" >About us</a></li>
-    </ul>
+        <a href="index.html">Home</a>
+        <a href="African Islands.html">African Islands</a>
+        <a href="North Africa.html">North Africa</a>
+        <a href="Central Africa.html">Central Africa</a>
+        <a href="Southern Africa.html">Southern Africa</a>
+        <a href="calculator.html">Calculator</a>
+        <a href="About.html" >About us</a>
 </div>
 
         <script src="calculator.js"></script>
