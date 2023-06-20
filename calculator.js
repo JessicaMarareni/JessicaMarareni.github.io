@@ -1,6 +1,6 @@
 function help(){
     alert("Hi there👋. "+
-    "This calculator does addition, subtraction, multiplication and division."+
+    "This calculator does addition, subtraction, multiplication and division. "+
     "We are BODMAS certified so don't worry about that :). "+
     "You may notice that nothing happens when you type using your own keys. "+
     "Please make use of our keys that you see on the screen at this point. "+
