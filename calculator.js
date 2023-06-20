@@ -340,4 +340,4 @@ function zero(){
         document.getElementById("currentsum").innerHTML=finalanswer;
 
 }
-    
+//Should work
