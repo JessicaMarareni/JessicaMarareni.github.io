@@ -142,10 +142,8 @@ function zero(){
         var userinp=document.querySelector("#currentsum").innerHTML;
         let NewNum=userinp.split(/[-+/*]/);
         let opss=userinp.split(/[01234567890.]/);
-        document.getElementById("tester").innerHTML=userinp;
         
-        let NewNums=[]
-
+        let NewNums=[];
         for (const item of NewNum){
             if (item !=''){
                 NewNums.push(item);
@@ -206,9 +204,6 @@ function zero(){
             NewNums.splice(operators.indexOf("*-")+1,1,NewNums[operators.indexOf("*-")+1]*-1);
             operators.splice(operators.indexOf("*"),1,"*")
         }
-
-document.getElementById("c").innerHTML=NewNums;
-document.getElementById("o").innerHTML=operators;
 
         for (const item of operators){
             if(item=="/"){
