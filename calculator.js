@@ -222,6 +222,8 @@ function help(){
             alert("You may not have /+")
          } else if(exbef=="*"){
             alert("You may not have *+")
+         } else if(exbef=="("){
+            alert("Please type in a number after your bracket first")
          }
          else {
             document.getElementById("currentsum").innerHTML=userinp+"+";
@@ -254,6 +256,8 @@ function help(){
             alert("You may not have +/")
          } else if(exbef=="*"){
             alert("You may not have */")
+         } else if(exbef=="("){
+            alert("Please type in a number after your bracket first")
          }
          else {
             document.getElementById("currentsum").innerHTML=userinp+"/";
@@ -274,6 +278,8 @@ function help(){
             alert("You may not have /*")
          } else if(exbef=="+"){
             alert("You may not have +*")
+         } else if(exbef=="("){
+            alert("Please type in a number after your bracket first")
          }
          else {
             document.getElementById("currentsum").innerHTML=userinp+"*";
